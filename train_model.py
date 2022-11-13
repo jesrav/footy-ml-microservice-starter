@@ -34,16 +34,15 @@ if __name__ == '__main__':
     footy_model = LinearRegression()
 
     print("Calculate and save cross validation scores for the model")
-    cv_scores_fm = cross_val_score(footy_model, df, df[TARGET], cv=5, scoring='neg_mean_squared_error')
-    metrics = {"Cross validation Mean Absolute Error": np.sqrt(-cv_scores_fm.mean())}
+    cv_scores_fm = cross_val_score(footy_model, df[FEATURES], df[TARGET], cv=5, scoring='neg_mean_squared_error')
+    metrics = {"CV_MAE": np.sqrt(-cv_scores_fm.mean())}
+    print(f"Model Cross validation Mean Absolute Error: {metrics['CV_MAE']}")
     with open(f"{MODEL_TRAINING_OUT_DIR}/metrics.json", "w") as f:
        json.dump(metrics, f)
 
     print("Fit model on entire data set")
-    footy_model.fit(df, df.goal_diff)
+    footy_model.fit(df[FEATURES], df[TARGET])
 
     print("Save model")
-    trained_model_dict = footy_model.to_minimal_representation()
     with open(f"{MODEL_TRAINING_OUT_DIR}/model.pickle", "wb") as f:
-        pickle.dump(trained_model_dict, f)
-
+        pickle.dump(footy_model, f)
