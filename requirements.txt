@@ -1,2 +1,5 @@
+requests
 fastapi
 pandas
+scikit-learn
+matplotlib
