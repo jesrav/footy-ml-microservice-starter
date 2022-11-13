@@ -1,2 +1,4 @@
 .idea
 .deta
+model_training_artifacts/*
+!model_training_artifacts/.gitkeep
