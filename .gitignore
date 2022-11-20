@@ -1,3 +1,7 @@
 .idea
 .deta
+__azurite_*
+__blobstorage__*
+__pycache__*
+__questorage__*
 
