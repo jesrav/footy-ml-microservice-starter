@@ -1,1 +1,4 @@
-fastapi==0.86.0
+uvicorn
+fastapi
+pandas
+scikit-learn
