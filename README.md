@@ -1,8 +1,10 @@
-# Starter ML microservice to predict games for [FootyTracker](https://github.com/jesrav/footy-tracker)
-Workshop participants will train and deploy their own ML model to be registered at FootyTracker.
-Here it will be making real time predictions of match results and participating on the ML leaderboard🤖
+# FootyTracker starter ML microservice 
+Workshop participants will train and deploy their own ML model to be registered at [FootyTracker](https://github.com/jesrav/footy-tracker).
+Here it will be making real time predictions of match results and participate on the ML leaderboard🤖
 
-Giving your model a cool name is equally important as it's predictive performance!
+
+**Giving your model a cool name is equally important as it's predictive performance!**
+
 
 ## Getting started
 
